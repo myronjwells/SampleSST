@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A08447432053126000DEEFDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08447422053126000DEEFDB /* AppDelegate.swift */; };
-		A08447452053126000DEEFDB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08447442053126000DEEFDB /* ViewController.swift */; };
+		A08447452053126000DEEFDB /* SampleSSTMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08447442053126000DEEFDB /* SampleSSTMapViewController.swift */; };
 		A08447482053126000DEEFDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A08447462053126000DEEFDB /* Main.storyboard */; };
 		A084474A2053126000DEEFDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A08447492053126000DEEFDB /* Assets.xcassets */; };
 		A084474D2053126000DEEFDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A084474B2053126000DEEFDB /* LaunchScreen.storyboard */; };
@@ -36,7 +36,7 @@
 /* Begin PBXFileReference section */
 		A084473F2053126000DEEFDB /* SampleSST.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleSST.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A08447422053126000DEEFDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A08447442053126000DEEFDB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A08447442053126000DEEFDB /* SampleSSTMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleSSTMapViewController.swift; sourceTree = "<group>"; };
 		A08447472053126000DEEFDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A08447492053126000DEEFDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A084474C2053126000DEEFDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,7 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				A08447422053126000DEEFDB /* AppDelegate.swift */,
-				A08447442053126000DEEFDB /* ViewController.swift */,
+				A08447442053126000DEEFDB /* SampleSSTMapViewController.swift */,
 				A08447462053126000DEEFDB /* Main.storyboard */,
 				A08447492053126000DEEFDB /* Assets.xcassets */,
 				A084474B2053126000DEEFDB /* LaunchScreen.storyboard */,
@@ -259,7 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A08447452053126000DEEFDB /* ViewController.swift in Sources */,
+				A08447452053126000DEEFDB /* SampleSSTMapViewController.swift in Sources */,
 				A08447432053126000DEEFDB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,6 +429,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GM2T53Y5J5;
 				INFOPLIST_FILE = SampleSST/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.myronwells.SampleSST;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -444,6 +445,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GM2T53Y5J5;
 				INFOPLIST_FILE = SampleSST/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.myronwells.SampleSST;
 				PRODUCT_NAME = "$(TARGET_NAME)";

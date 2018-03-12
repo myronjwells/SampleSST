@@ -1,24 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--SampleSST Map View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SampleSSTMapViewController" customModule="SampleSST" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FaR-T5-EQ1">
+                                <rect key="frame" x="16" y="51" width="343" height="35"/>
+                                <color key="backgroundColor" red="1" green="0.65156431479999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Use Current Location">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="useCurrentLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FaO-be-J7a"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City, State" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIq-9z-7zb">
+                                <rect key="frame" x="85" y="22" width="206" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or use the map to select your location - long press to choose" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3k-jJ-yhh">
+                                <rect key="frame" x="36" y="94" width="303" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="BTO-Xa-WUS">
+                                <rect key="frame" x="0.0" y="193" width="375" height="327"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="latitude" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPK-IS-1Id">
+                                <rect key="frame" x="16" y="543" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="longitude" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUL-oZ-gqx">
+                                <rect key="frame" x="16" y="572" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FaR-T5-EQ1" secondAttribute="trailing" constant="16" id="2ps-Lz-9pR"/>
+                            <constraint firstItem="bPK-IS-1Id" firstAttribute="top" secondItem="BTO-Xa-WUS" secondAttribute="bottom" constant="23" id="41X-XN-BWK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bPK-IS-1Id" secondAttribute="trailing" constant="16" id="8FV-eT-Gk4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xUL-oZ-gqx" secondAttribute="bottom" constant="74" id="Cl6-RI-9Ix"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xUL-oZ-gqx" secondAttribute="trailing" constant="16" id="Dzu-qs-Amy"/>
+                            <constraint firstItem="BTO-Xa-WUS" firstAttribute="top" secondItem="C3k-jJ-yhh" secondAttribute="bottom" constant="58" id="Ear-RQ-aQp"/>
+                            <constraint firstItem="C3k-jJ-yhh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="Pfb-j5-NdD"/>
+                            <constraint firstItem="bIq-9z-7zb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="2" id="Vmu-yD-ck7"/>
+                            <constraint firstItem="BTO-Xa-WUS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="asD-xD-sCx"/>
+                            <constraint firstItem="bIq-9z-7zb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="85" id="g6q-PZ-qLX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="C3k-jJ-yhh" secondAttribute="trailing" constant="36" id="gaQ-mP-pYM"/>
+                            <constraint firstItem="bPK-IS-1Id" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="hY6-p8-Unl"/>
+                            <constraint firstItem="xUL-oZ-gqx" firstAttribute="top" secondItem="bPK-IS-1Id" secondAttribute="bottom" constant="8" id="rS9-cl-23S"/>
+                            <constraint firstItem="FaR-T5-EQ1" firstAttribute="top" secondItem="bIq-9z-7zb" secondAttribute="bottom" constant="8" id="raH-LL-Gu4"/>
+                            <constraint firstItem="C3k-jJ-yhh" firstAttribute="top" secondItem="FaR-T5-EQ1" secondAttribute="bottom" constant="8" id="vEh-1i-Hin"/>
+                            <constraint firstItem="FaR-T5-EQ1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="wa8-hG-1XV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bIq-9z-7zb" secondAttribute="trailing" constant="84" id="y1O-HC-tpy"/>
+                            <constraint firstItem="xUL-oZ-gqx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="yml-ty-pVL"/>
+                            <constraint firstItem="BTO-Xa-WUS" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="z5b-sb-RLr"/>
+                            <constraint firstItem="FaR-T5-EQ1" firstAttribute="top" secondItem="bIq-9z-7zb" secondAttribute="bottom" constant="8" id="zNA-h5-x6F"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="currentSelectedCityStateLabel" destination="bIq-9z-7zb" id="YyG-tv-INx"/>
+                        <outlet property="latitudeCoords" destination="bPK-IS-1Id" id="Pq0-Ys-bsq"/>
+                        <outlet property="longitudeCoords" destination="xUL-oZ-gqx" id="Sd5-Pg-0gF"/>
+                        <outlet property="mapView" destination="BTO-Xa-WUS" id="Zhc-Nq-7Tx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-98.400000000000006" y="118.29085457271366"/>
         </scene>
     </scenes>
 </document>
